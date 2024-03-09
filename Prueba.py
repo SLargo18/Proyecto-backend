@@ -1,5 +1,4 @@
 
-
 import random
 
 victorias=0
@@ -19,7 +18,7 @@ while True:
             jugador += nueva_carta
             print("nueva carta para el jugador:", nueva_carta)
         else:
-            if jugador == 21 or (jugador > dealer and jugador > 21):
+            if jugador == 21  or (jugador > dealer and jugador < 21):
                 print ("Ganaste!")
                 victorias += 1
                 break
@@ -33,13 +32,11 @@ while True:
                 break
     preguntar_si_salir= input('desea continuar el juego? S/N')
     if preguntar_si_salir == 'S':
-            print('gracias por jugar')
+            print('gracias por jugar','total de victorias', victorias , 'total de derrotas', derrotas )
             print('total de victorias:', victorias)
             print('Total de derrotas', derrotas)
             break
     else: 
             print('\n'*20)
+            
     #juego.append
-                
-         
-
